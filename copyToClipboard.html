@@ -7,8 +7,7 @@
     <title>copyToClipboard</title>
     <script>
       function copyToClipboard() {
-        var copyText = document.getElementById("clippy"); 
-
+        var copyText = document.getElementById("clippy").innerHTML;
         navigator.clipboard.writeText(copyText.value);
       }
     </script>
