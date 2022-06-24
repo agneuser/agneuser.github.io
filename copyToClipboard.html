@@ -5,8 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <base target="_blank">
     <title>copyToClipboard</title>
+    <script>
+      function copyToClipboard() {
+        var copyText = document.getElementById("clippy"); 
+
+        copyText.select();
+        copyText.setSelectionRange(0, 99999); /* For mobile devices */
+        
+        navigator.clipboard.writeText(copyText.value);
+      }
+    </script>
   </head>
   <body>
-    <h1>Hello World</h1>
+    <code id="clippy">Hello World</code>&nbsp<button onclick="myFunction()">&#128203;</button>
   </body>
 </html>
